@@ -21,9 +21,11 @@
 .header-nav-logo-icon {
   transition: transform 0.5s ease;
 }
+
 .header-nav-logo-icon:hover {
   transform: rotate(360deg);
 }
+
 .header-nav-link-home {
   display: none;
 }
@@ -101,6 +103,7 @@
   stroke: #111;
   transition: stroke 300ms ease-in-out, scale 300ms ease-in-out;
 }
+
 .header-menu-open-icon:hover,
 .header-menu-close-icon:hover {
   stroke: #4f2ee8;
@@ -252,10 +255,12 @@
     fill: #eac645;
     animation: arrowMove 2s linear infinite;
   }
+
   @keyframes arrowMove {
     0% {
       transform: translateX(-10px);
     }
+
     100% {
       transform: translateX(5px);
     }
@@ -384,7 +389,6 @@
 .log-out-visible {
   display: flex;
   pointer-events: auto;
-  z-index: 0;
-  bottom: -48px;
-  top: auto;
+  z-index: 1;
+  top: 55px;
 }

@@ -4,7 +4,7 @@ import icon from '../img/icons.svg';
 import { logout, onFormSubmit } from './autorization';
 import { onMenuCloseButtonClick, onMenuOpenButtonClick } from './mob-menu';
 import { refs as mainRefs } from './refs';
-import {} from './mob-menu';
+
 export const refs = {
   headerContainer: document.querySelector('.header-container'),
   headerNavigation: document.querySelector('.header-nav-list'),
@@ -18,6 +18,7 @@ export const refs = {
   menuOpenButton: document.querySelector('.header-menu-open-button'),
   menuCloseButton: document.querySelector('.header-menu-close-button'),
 };
+console.log(refs.logOutButton);
 
 const signUpMarkup = `<form class="authorization-form">
   <button class="authorization-button-close" type="button">
@@ -110,13 +111,13 @@ function showLogOutButton(e) {
   );
   refs.logOutButton.style.width = `${buttonWidth}px`;
   refs.logOutButton.classList.toggle('log-out-visible');
+  refs.logOutButton.addEventListener('click', logout);
 }
 
 refs.menuOpenButton.addEventListener('click', onMenuOpenButtonClick);
 refs.menuCloseButton.addEventListener('click', onMenuCloseButtonClick);
 refs.sighUpButton.addEventListener('click', onSingUpButtonClick);
 refs.showLogOutButton.addEventListener('click', showLogOutButton);
-refs.logOutButton.addEventListener('click', logout);
 
 function menuDarkTheme(i) {
   if (mainRefs.checkbox.checked) {

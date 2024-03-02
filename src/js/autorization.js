@@ -76,15 +76,15 @@ function signIn(email, password) {
     });
 }
 
-export function logout() {
-  if (location.pathname.includes('shopping-list')) {
-    location.pathname = '/';
-  }
+export function logout(e) {
   localStorage.removeItem('userInfo');
   refs.headerNavigation.classList.remove('visible-flex');
   refs.sighUpButton.classList.remove('hidden');
   refs.userButton.classList.remove('visible-flex');
   refs.logOutButton.classList.remove('log-out-visible');
+  if (location.pathname.includes('shopping-list')) {
+    location.pathname = '/';
+  }
 }
 
 export function isUserLoggedIn() {

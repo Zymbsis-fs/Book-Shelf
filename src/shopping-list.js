@@ -1,5 +1,7 @@
 import './js/enableDarkTheme';
+import './js/header';
 import './js/autorization';
+import './js/mob-menu';
 import './js/donation-list';
 import './js/cart-countdown-timer';
 import { refs } from './js/refs';
