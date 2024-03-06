@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/DigITall-JS/",
+    "build": "vite build --base=/Book-Shelf/",
     "preview": "vite preview",
     "push": "git add . && git commit -m '.' && git push"
   },
